@@ -1,3 +1,14 @@
+## Link
+
+http://cognitosample-ayudevaz.s3-website-us-east-1.amazonaws.com/
+
+# yop
+alexdesigns@yopmail.com
+
+# cognito test user
+alexdesigns@yopmail.com
+Ycombin@tor1
+
 Cognito Quickstart
 ===================================================
 
@@ -21,8 +32,8 @@ Cognito Quickstart
 ##### Install the required tools
 * Create an AWS account
 * Install [npm](https://www.npmjs.com/)
-* [Install or update your aws cli](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) 
-* [Install or update your eb cli](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html) 
+* [Install or update your aws cli](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
+* [Install or update your eb cli](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html)
 * [Install angular-cli](https://github.com/angular/angular-cli)
 
 
@@ -45,7 +56,7 @@ npm start
 
 ## Creating AWS Resources
 This sample application can be deployed to either Elastic Beanstalk or S3. S3 will host this application as a static site
-while Elastic Beanstalk gives you the capability of adding backend operations to the application. 
+while Elastic Beanstalk gives you the capability of adding backend operations to the application.
 
 * [What is Elastic Beanstalk](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html)
 * [What is S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html)
@@ -58,9 +69,9 @@ cd aws
 ./createResources.sh
 ```
 
-Running the above command will create the necessary AWS resources and build & deploy your code to AWS. 
+Running the above command will create the necessary AWS resources and build & deploy your code to AWS.
 It will prompt you to choose your deployment target (S3 or Elastic Beanstalk). Choosing 'S3' makes your deployment
-completely serverless, while choosing Elastic Beanstalk will create an EC2 instance that will host this NodeJS app. 
+completely serverless, while choosing Elastic Beanstalk will create an EC2 instance that will host this NodeJS app.
 
 *Caution:* You might incur AWS charges after running the setup script
 
@@ -88,5 +99,3 @@ eb deploy
 # View your deployed application in a browser
 eb open
 ```
-
-

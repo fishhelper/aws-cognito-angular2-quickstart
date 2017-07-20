@@ -13,6 +13,8 @@ import {AwsUtil} from "./service/aws.service";
 import {UseractivityComponent} from "./secure/useractivity/useractivity.component";
 import {MyProfileComponent} from "./secure/profile/myprofile.component";
 import {SecureHomeComponent} from "./secure/landing/securehome.component";
+import {WinkComponent} from "./secure/wink/wink.component";
+import {WinkCallbackComponent} from "./secure/wink/callback.component";
 import {JwtComponent} from "./secure/jwttokens/jwt.component";
 import {DynamoDBService} from "./service/ddb.service";
 import {LoginComponent} from "./public/auth/login/login.component";
@@ -40,6 +42,8 @@ import {NewPasswordComponent} from "./public/auth/newpassword/newpassword.compon
         MyProfileComponent,
         SecureHomeComponent,
         JwtComponent,
+        WinkComponent,
+        WinkCallbackComponent,
         AppComponent
     ],
     imports: [

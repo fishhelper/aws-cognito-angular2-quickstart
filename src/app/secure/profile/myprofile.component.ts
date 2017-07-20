@@ -44,7 +44,7 @@ export class GetParametersCallback implements Callback {
     }
 
     callbackWithParam(result: any) {
-
+        console.log(JSON.stringify(result));
         for (let i = 0; i < result.length; i++) {
             let parameter = new Parameters();
             parameter.name = result[i].getName();

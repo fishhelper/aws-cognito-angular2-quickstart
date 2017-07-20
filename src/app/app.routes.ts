@@ -4,6 +4,8 @@ import {AboutComponent, HomeComponent, HomeLandingComponent} from "./public/home
 import {SecureHomeComponent} from "./secure/landing/securehome.component";
 import {MyProfileComponent} from "./secure/profile/myprofile.component";
 import {JwtComponent} from "./secure/jwttokens/jwt.component";
+import {WinkComponent} from "./secure/wink/wink.component";
+import {WinkCallbackComponent} from "./secure/wink/callback.component";
 import {UseractivityComponent} from "./secure/useractivity/useractivity.component";
 import {LoginComponent} from "./public/auth/login/login.component";
 import {RegisterComponent} from "./public/auth/register/registration.component";
@@ -48,6 +50,8 @@ const secureHomeRoutes: Routes = [
         {path: 'jwttokens', component: JwtComponent},
         {path: 'myprofile', component: MyProfileComponent},
         {path: 'useractivity', component: UseractivityComponent},
+        {path: 'wink', component: WinkComponent},
+        {path: 'winkcallback', component: WinkCallbackComponent},
         {path: '', component: MyProfileComponent}]
     }
 ];
