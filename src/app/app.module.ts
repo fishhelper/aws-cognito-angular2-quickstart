@@ -8,13 +8,16 @@ import {UserParametersService} from "./service/user-parameters.service";
 import {UserLoginService} from "./service/user-login.service";
 import {CognitoUtil} from "./service/cognito.service";
 import {routing} from "./app.routes";
+import {LinkComponent, LinkLandingComponent} from "./public/link.component";
 import {AboutComponent, HomeComponent, HomeLandingComponent} from "./public/home.component";
 import {AwsUtil} from "./service/aws.service";
 import {UseractivityComponent} from "./secure/useractivity/useractivity.component";
 import {MyProfileComponent} from "./secure/profile/myprofile.component";
 import {SecureHomeComponent} from "./secure/landing/securehome.component";
-import {WinkComponent} from "./secure/wink/wink.component";
-import {WinkCallbackComponent} from "./secure/wink/callback.component";
+import {AyuHomeComponent} from "./ayu/landing/ayuhome.component";
+import {WinkComponent} from "./ayu/wink/wink.component";
+import {WinkCallbackComponent} from "./ayu/wink/callback.component";
+import {LinkLoginComponent} from "./public/auth/linklogin/linklogin.component";
 import {JwtComponent} from "./secure/jwttokens/jwt.component";
 import {DynamoDBService} from "./service/ddb.service";
 import {LoginComponent} from "./public/auth/login/login.component";
@@ -38,10 +41,14 @@ import {NewPasswordComponent} from "./public/auth/newpassword/newpassword.compon
         AboutComponent,
         HomeLandingComponent,
         HomeComponent,
+        LinkLoginComponent,
+        LinkLandingComponent,
+        LinkComponent,
         UseractivityComponent,
         MyProfileComponent,
         SecureHomeComponent,
         JwtComponent,
+        AyuHomeComponent,
         WinkComponent,
         WinkCallbackComponent,
         AppComponent

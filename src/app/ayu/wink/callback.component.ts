@@ -11,7 +11,7 @@ import {Router,ActivatedRoute} from "@angular/router";
 export class WinkCallbackComponent implements LoggedInCallback {
 
     public cognitoId: String;
-    private winkauthcode: string;
+    public winkauthcode: string;
 
     constructor(public router: Router, public userService: UserLoginService, public userParams: UserParametersService, public cognitoUtil: CognitoUtil, private route: ActivatedRoute) {
         this.userService.isAuthenticated(this);
@@ -32,7 +32,7 @@ export class WinkCallbackComponent implements LoggedInCallback {
 
     isLoggedIn(message: string, isLoggedIn: boolean) {
         if (!isLoggedIn) {
-            this.router.navigate(['/home/login']);
+            this.router.navigate(['/link/login']);
         } else {
             console.log('logged in and ' + this.winkauthcode);
         }

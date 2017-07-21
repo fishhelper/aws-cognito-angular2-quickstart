@@ -19,7 +19,7 @@ export class WinkComponent implements LoggedInCallback {
 
     isLoggedIn(message: string, isLoggedIn: boolean) {
         if (!isLoggedIn) {
-            this.router.navigate(['/home/login']);
+            this.router.navigate(['/link/login']);
         } else {
             console.log('logged in');
         }

@@ -1,11 +1,14 @@
 import {RouterModule, Routes} from "@angular/router";
 import {ModuleWithProviders} from "@angular/core";
+import {LinkComponent, LinkLandingComponent} from "./public/link.component";
 import {AboutComponent, HomeComponent, HomeLandingComponent} from "./public/home.component";
 import {SecureHomeComponent} from "./secure/landing/securehome.component";
+import {AyuHomeComponent} from "./ayu/landing/ayuhome.component";
+import {WinkComponent} from "./ayu/wink/wink.component";
+import {WinkCallbackComponent} from "./ayu/wink/callback.component";
+import {LinkLoginComponent} from "./public/auth/linklogin/linklogin.component";
 import {MyProfileComponent} from "./secure/profile/myprofile.component";
 import {JwtComponent} from "./secure/jwttokens/jwt.component";
-import {WinkComponent} from "./secure/wink/wink.component";
-import {WinkCallbackComponent} from "./secure/wink/callback.component";
 import {UseractivityComponent} from "./secure/useractivity/useractivity.component";
 import {LoginComponent} from "./public/auth/login/login.component";
 import {RegisterComponent} from "./public/auth/register/registration.component";
@@ -13,6 +16,22 @@ import {ForgotPassword2Component, ForgotPasswordStep1Component} from "./public/a
 import {LogoutComponent, RegistrationConfirmationComponent} from "./public/auth/confirm/confirmRegistration.component";
 import {ResendCodeComponent} from "./public/auth/resend/resendCode.component";
 import {NewPasswordComponent} from "./public/auth/newpassword/newpassword.component";
+
+const linkRoutes: Routes = [
+  {
+    path: '',
+    redirectTo: '/link',
+    pathMatch: 'full'
+  },
+  {
+      path: 'link',
+      component: LinkComponent,
+      children: [
+          {path: 'login', component: LinkLoginComponent},
+          {path: '', component: LinkLandingComponent}
+      ]
+  },
+];
 
 const homeRoutes: Routes = [
     {
@@ -39,7 +58,6 @@ const homeRoutes: Routes = [
 
 const secureHomeRoutes: Routes = [
     {
-
         path: '',
         redirectTo: '/securehome',
         pathMatch: 'full'
@@ -50,11 +68,23 @@ const secureHomeRoutes: Routes = [
         {path: 'jwttokens', component: JwtComponent},
         {path: 'myprofile', component: MyProfileComponent},
         {path: 'useractivity', component: UseractivityComponent},
-        {path: 'wink', component: WinkComponent},
-        {path: 'winkcallback', component: WinkCallbackComponent},
         {path: '', component: MyProfileComponent}]
     }
 ];
+
+const ayuRoutes: Routes = [
+  {
+      path: '',
+      redirectTo: '/ayu',
+      pathMatch: 'full'
+  },
+  {
+      path: 'ayu', component: AyuHomeComponent, children: [
+        {path: 'wink', component: WinkComponent},
+        {path: 'winkcallback', component: WinkCallbackComponent},
+      ]
+  }
+]
 
 const routes: Routes = [
     {
@@ -62,6 +92,8 @@ const routes: Routes = [
         children: [
             ...homeRoutes,
             ...secureHomeRoutes,
+            ...linkRoutes,
+            ...ayuRoutes,
             {
                 path: '',
                 component: HomeComponent

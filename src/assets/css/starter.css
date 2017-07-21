@@ -8,9 +8,7 @@ body,
 html {
     width: 100%;
     height: 100%;
-
-    background: url(../img/intro-bg.jpg) no-repeat center center;
-    background-size: cover;
+    background-color: #ffffff;
 }
 
 body,
@@ -93,6 +91,10 @@ h6 {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 2px;
+}
+
+.fullpage-section {
+  background-color: #ffffff;
 }
 
 .content-section-a {
