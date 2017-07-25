@@ -9,6 +9,8 @@ alexdesigns@yopmail.com
 alexdesigns@yopmail.com
 Ycombin@tor1
 
+# http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html
+
 Cognito Quickstart
 ===================================================
 
